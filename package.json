@@ -1,0 +1,28 @@
+{
+  "name": "guacamole-common-js",
+  "version": "1.4.0",
+  "main": "dist/guacamole-common-js.js",
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "npm": "^8.3.0",
+    "uglify-js": "^3.14.5",
+    "gitpkg": "^1.0.0-beta.2"
+  },
+  "scripts": {
+    "concat": "mkdir -p dist/ && concat guacamole-common-js/src/main/webapp/modules/* guacamole-common-js/src/main/export.js -o dist/guacamole-common-js.js",
+    "uglify": "uglifyjs -o dist/guacamole-common-js.min.js dist/guacamole-common-js.js",
+    "build": "npm run concat && npm run uglify",
+    "prepack": "npm run build",
+    "publish": "gitpkg publish"
+  },
+  "gitpkg": {
+    "registry": "git@github.com:Osirium/guacamole-common-js.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://issues.apache.org/jira/browse/GUACAMOLE/"
+  }
+}

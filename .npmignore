@@ -1,0 +1,6 @@
+*.tgz
+src/
+pom.xml
+jsdoc-conf.json
+.ratignore
+static.xml

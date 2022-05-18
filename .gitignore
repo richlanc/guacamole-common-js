@@ -1,2 +1,5 @@
 *~
 target/
+dist/
+*.tgz
+node_modules
